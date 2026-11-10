@@ -1,0 +1,453 @@
+
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="functions.js"></script>
+  <link href="terminal.css" rel="stylesheet">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+
+<body>
+
+
+
+
+<div id="videoPreview">
+    <video
+        id="previewVideo"
+        src = "../Assets/Bloxdio Trailer.mov"
+        autoplay
+        loop
+        muted
+        playsinline>
+    </video>
+
+    <div class="previewTitle">
+        Bloxd.io Trailer [ Click me ]
+    </div>
+</div>
+
+<div id="videoModal">
+    <div class="videoBackdrop"></div>
+
+    <div class="videoWindow">
+<div style="width: 100%; display: flex; flex-direction: row">
+    <button aria-label="Delete item" class="delete-button" id="closeVideo">
+  <svg class="trash-svg" viewBox="0 -10 64 74" xmlns="http://www.w3.org/2000/svg">
+    <g id="trash-can">
+      <rect x="16" y="24" width="32" height="30" rx="3" ry="3" fill="#e74c3c"></rect>
+
+      <g transform-origin="12 18" id="lid-group">
+        <rect x="12" y="12" width="40" height="6" rx="2" ry="2" fill="#c0392b"></rect>
+        <rect x="26" y="8" width="12" height="4" rx="2" ry="2" fill="#c0392b"></rect>
+      </g>
+    </g>
+  </svg>
+</button>
+<h1 style="display: flex;
+    justify-content: center;
+    align-items: center;"> Bloxd.io Trailer</h1> <h3 style="    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    margin-left: 3px;
+    margin-top: 7px;">by brune!</h3>
+</div>
+
+
+        <video
+            id="modalVideo"
+            controls
+            autoplay
+            loop>
+        </video>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+  
+
+  
+
+  <div class="container">
+
+    <!-- header -->
+    <div style="margin-bottom: 32px;">
+      <div class="mono" style="font-size: 11px; color: var(--text-dim); margin-bottom: 12px;">
+        <span style="color: var(--accent);">$</span> whoami
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
+        <div style="
+        width: 40px; height: 40px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #AE0D24, #E50C06);
+        display: flex; align-items: center; justify-content: center;
+        font-size: 16px; font-weight: 600; color: #ddd;
+        flex-shrink: 0;
+      ">
+
+          <img src="https://lh3.googleusercontent.com/ogw/AF2bZyiKOL8usSGX_TotpmdcWio4XlmwafuN1XmLmBBhQNPCYNU=s32-c-mo" style="border-radius: 50%; height: 92.5%; width: 92.5%;" alt="">
+        </div>
+        <div>
+          <div style="font-size: 17px; font-weight: 500; color: var(--text-bright); line-height: 1.2;">
+            Just an NPC 😅
+          </div>
+          <div class="mono" style="font-size: 11px; color: var(--text-dim); margin-top: 3px;">bruneyt_83721</div>
+        </div>
+      </div>
+      <div class="mono" style="display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-dim);">
+        <span style="color: var(--accent);">$</span>
+        <span style="width: 7px; height: 14px; background: var(--accent); border-radius: 1px; opacity: 0.7;" class="blink"></span>
+      </div>
+    </div>
+
+    <!-- files -->
+    <div class="card" style="padding: 4px;">
+
+      <!-- AboutMe.mkv -->
+      <div class="file-row" onclick="toggle('about')">
+        <div class="file-name">
+          <span class="iconify ic-mkv" data-icon="lucide:film" style="font-size:14px;"></span>
+          AboutMe<span class="file-ext">.mkv</span>
+        </div>
+        <div class="file-meta">
+          <span>media</span>
+          <span class="chev" id="ch-about">›</span>
+        </div>
+      </div>
+      <div class="collapse" id="sec-about">
+        <div class="collapse-inner" style="padding-top: 12px;">
+          <p style="font-size: 12.5px; line-height: 1.7; color: var(--text-dim);">
+            Just an NPC navigating the digital world. I spend my time coding browsers, building random projects, and occasionally touching grass (rarely).
+          </p>
+          <p style="font-size: 12.5px; line-height: 1.7; color: var(--text-dim); margin-top: 8px;">
+            Currently building <span style="color: var(--text);">Ray Browser</span> and a bunch of other things that will probably end up abandoned (but we stay optimistic 😅).
+          </p>
+          <div style="display: flex; gap: 16px; margin-top: 12px; font-size: 11px; color: var(--text-dim); opacity: 0.6;">
+            <span>🌍 Earth</span>
+            <span>📅 Joined the grid</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SpaceX.wav -->
+      <div class="file-row" onclick="toggle('spacex')">
+        <div class="file-name">
+          <span class="iconify ic-wav" data-icon="lucide:radio" style="font-size:14px;"></span>
+          SpaceX<span class="file-ext">.wav</span>
+        </div>
+        <div class="file-meta">
+          <span>audio</span>
+          <span class="chev" id="ch-spacex">›</span>
+        </div>
+      </div>
+      <div class="collapse" id="sec-spacex">
+        <div class="collapse-inner" style="padding-top: 12px;">
+          <p style="font-size: 12.5px; color: var(--text-dim);">
+            SpaceX enthusiast. Watching Starship launches at 3 AM is a personality trait at this point. 🚀
+          </p>
+        </div>
+      </div>
+
+      <!-- Developer.css -->
+      <div class="file-row" onclick="toggle('dev')">
+        <div class="file-name">
+          <span class="iconify ic-css" data-icon="lucide:braces" style="font-size:14px;"></span>
+          Developer<span class="file-ext">.css</span>
+        </div>
+        <div class="file-meta">
+          <span>style</span>
+          <span class="chev" id="ch-dev">›</span>
+        </div>
+      </div>
+      <div class="collapse" id="sec-dev">
+        <div class="collapse-inner" style="padding-top: 12px;">
+          <div class="code-block">
+            <span class="punc">{</span><br>
+            &nbsp;&nbsp;<span class="key">languages</span><span class="punc">:</span> <span class="val">JS, HTML, CSS, PYTHON, SQL</span><br>
+            &nbsp;&nbsp;<span class="key">editor</span><span class="punc">:</span> <span class="str">`VScode, Trae, Claude Code, CodePen`</span><br>
+            &nbsp;&nbsp;<span class="key">focus</span><span class="punc">:</span> <span class="val">Web Dev, Browsers, Exploiting</span><br>
+            &nbsp;&nbsp;<span class="key">status</span><span class="punc">:</span> <span class="str">"𝐿𝒾𝒻𝑒 𝒾𝓈 𝐼𝒩𝒮𝐼𝒢𝒩𝐼𝐹𝐼𝒞𝒜𝒩𝒯"</span><br>
+            <span class="punc">}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MacOS.dmg -->
+      <div class="file-row" style="cursor: default;">
+        <div class="file-name">
+          <span class="iconify ic-dmg" data-icon="lucide:hard-drive" style="font-size:14px;"></span>
+          MacOS<span class="file-ext">.dmg</span>
+        </div>
+        <div class="file-meta">
+          <span>disk</span>
+        </div>
+      </div>
+
+      <!-- Gamer.mod -->
+      <div class="file-row" onclick="toggle('gamer')">
+        <div class="file-name">
+          <span class="iconify ic-mod" data-icon="lucide:gamepad-2" style="font-size:14px;"></span>
+          Gamer<span class="file-ext">.mod</span>
+        </div>
+        <div class="file-meta">
+          <span>mod</span>
+          <span class="chev" id="ch-gamer">›</span>
+        </div>
+      </div>
+      <div class="collapse" id="sec-gamer">
+        <div class="collapse-inner" style="padding-top: 12px;">
+          <div class="game-row">
+            <span class="game-label">Bloxd</span>
+            <span class="game-value">Brune</span>
+          </div>
+          <div class="game-row">
+            <span class="game-label">Minecraft</span>
+            <span class="game-value">Minicrafter2013</span>
+          </div>
+          <div class="game-row">
+            <span class="game-label">Roblox</span>
+            <span class="game-value">Brune_ALT, BruneBricksGaming</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nerd.asm -->
+      <div class="file-row" style="cursor: default;">
+        <div class="file-name">
+          <span class="iconify ic-asm" data-icon="lucide:cpu" style="font-size:14px;"></span>
+          Nerd<span class="file-ext">.asm</span>
+        </div>
+        <div class="file-meta">
+          <span>asm</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Socials.txt -->
+      <div class="file-row" onclick="toggle('social')">
+        <div class="file-name">
+          <span class="iconify ic-txt" data-icon="lucide:file-text" style="font-size:14px;"></span>
+          Socials<span class="file-ext">.txt</span>
+        </div>
+        <div class="file-meta">
+          <span>text</span>
+          <span class="chev open" id="ch-social">›</span>
+        </div>
+      </div>
+      <div class="collapse show" id="sec-social">
+        <div class="collapse-inner" style="padding-top: 10px;">
+
+          <a href="https://discord.com" target="_blank" class="link-row">
+            <div class="link-left">
+              <span class="iconify si-discord" data-icon="ic:baseline-discord" style="font-size:15px;"></span>
+              <div>
+                <div class="link-label">Discord</div>
+                <div class="link-value">bruneyt_83721</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;">
+              <button class="copy-btn" onclick="event.preventDefault();event.stopPropagation();cp('bruneyt_83721')" title="copy">
+                <span class="iconify" data-icon="lucide:copy" style="font-size:12px;"></span>
+              </button>
+              <span class="arrow">↗</span>
+            </div>
+          </a>
+
+          <a href="https://youtube.com/@brunegaming" target="_blank" class="link-row">
+            <div class="link-left">
+              <span class="iconify si-yt" data-icon="lucide:youtube" style="font-size:15px;"></span>
+              <div>
+                <div class="link-label">YouTube <span style="font-size:10px;opacity:0.5;">1.5k subs</span></div>
+                <div class="link-value">@brunegaming</div>
+              </div>
+            </div>
+            <span class="arrow">↗</span>
+          </a>
+
+          <a href="https://x.com/BruneGaming" target="_blank" class="link-row">
+            <div class="link-left">
+              <span class="iconify si-x" data-icon="ri:twitter-x-fill" style="font-size:14px;"></span>
+              <div>
+                <div class="link-label">X</div>
+                <div class="link-value">@BruneGaming</div>
+              </div>
+            </div>
+            <span class="arrow">↗</span>
+          </a>
+
+          <a href="https://monkeytype.com/profile/BruneGaming" target="_blank" class="link-row">
+            <div class="link-left">
+              <span class="iconify si-mt" data-icon="lucide:keyboard" style="font-size:14px;"></span>
+              <div>
+                <div class="link-label">MonkeyType</div>
+                <div class="link-value">@BruneGaming</div>
+              </div>
+            </div>
+            <span class="arrow">↗</span>
+          </a>
+
+          <a href="https://codepen.io/BruneCoding" target="_blank" class="link-row">
+            <div class="link-left">
+              <span class="iconify si-cp" data-icon="lucide:codepen" style="font-size:14px;"></span>
+              <div>
+                <div class="link-label">CodePen</div>
+                <div class="link-value">BruneCoding</div>
+              </div>
+            </div>
+            <span class="arrow">↗</span>
+          </a>
+
+          <a href="mailto:BruneYT@proton.me" class="link-row">
+            <div class="link-left">
+              <span class="iconify si-mail" data-icon="lucide:mail" style="font-size:14px;"></span>
+              <div>
+                <div class="link-label">Email</div>
+                <div class="link-value">BruneYT@proton.me</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;">
+              <button class="copy-btn" onclick="event.preventDefault();event.stopPropagation();cp('BruneYT@proton.me')" title="copy">
+                <span class="iconify" data-icon="lucide:copy" style="font-size:12px;"></span>
+              </button>
+              <span class="arrow">↗</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Projects.rs -->
+      <div class="file-row" onclick="toggle('proj')">
+        <div class="file-name">
+          <span class="iconify ic-rs" data-icon="lucide:folder-code" style="font-size:14px;"></span>
+          Projects<span class="file-ext">.rs</span>
+        </div>
+        <div class="file-meta">
+          <span>rust</span>
+          <span class="chev" id="ch-proj">›</span>
+        </div>
+      </div>
+      <div class="collapse" id="sec-proj">
+        <div class="collapse-inner" style="padding-top: 10px;">
+          <div style="display: flex; flex-direction: column; gap: 2px;">
+            
+            <a class="proj-row preview-trigger" onclick="openModal()">
+              <div class="proj-icon" style="background:rgba(106,170,122,0.1);color:#99dafb;">
+                <span class="iconify" data-icon="lucide:swords" style="font-size:14px;"></span>
+              </div>
+              <div style="flex:1;min-width:0;">
+                <div class="proj-name">Bloxd.io Trailer</div>
+                <div class="proj-url">bloxd.io</div>
+              </div>
+              <span class="arrow">↗</span>
+            </a>
+
+            <a href="https://seedfinder-temp.donotreply-creativecommons.workers.dev/" target="_blank" class="proj-row">
+              <div class="proj-icon" style="background:rgba(106,170,122,0.1);color:#6aaa7a;">
+                <span class="iconify" data-icon="lucide:sprout" style="font-size:14px;"></span>
+              </div>
+              <div style="flex:1;min-width:0;">
+                <div class="proj-name">The SeedFinder Project</div>
+                <div class="proj-url">seedfinder…workers.dev</div>
+              </div>
+              <span class="arrow">↗</span>
+            </a>
+
+            <a href="https://raybrowser.com" target="_blank" class="proj-row">
+              <div class="proj-icon" style="background:rgba(139,139,245,0.1);color:#8b8bf5;">
+                <span class="iconify" data-icon="lucide:globe" style="font-size:14px;"></span>
+              </div>
+              <div style="flex:1;min-width:0;">
+                <div class="proj-name">Ray Browser</div>
+                <div class="proj-url">raybrowser.com</div>
+              </div>
+              <span class="arrow">↗</span>
+            </a>
+
+            <a href="https://raybrowser.com" target="_blank" class="proj-row">
+              <div class="proj-icon" style="background:rgba(139,139,245,0.08);color:#7a7ac4;">
+                <span class="iconify" data-icon="lucide:layout-dashboard" style="font-size:14px;"></span>
+              </div>
+              <div style="flex:1;min-width:0;">
+                <div class="proj-name">Ray <span style="color:var(--text-dim);">[TAB]</span></div>
+                <div class="proj-url">ray://new-tab</div>
+              </div>
+              <span class="arrow">↗</span>
+            </a>
+
+            <a href="https://old-brungle.pages.dev" target="_blank" class="proj-row">
+              <div class="proj-icon" style="background:rgba(184,158,90,0.1);color:#b89e5a;">
+                <span class="iconify" data-icon="lucide:layout-grid" style="font-size:14px;"></span>
+              </div>
+              <div style="flex:1;min-width:0;">
+                <div class="proj-name">Brungle <span style="color:var(--text-dim);">[TAB]</span></div>
+                <div class="proj-url">old-brungle.pages.dev</div>
+              </div>
+              <span class="arrow">↗</span>
+            </a>
+
+            <a href="https://brungle.pages.dev" target="_blank" class="proj-row">
+              <div class="proj-icon" style="background:rgba(106,138,184,0.1);color:#6a8ab8;">
+                <span class="iconify" data-icon="lucide:compass" style="font-size:14px;"></span>
+              </div>
+              <div style="flex:1;min-width:0;">
+                <div class="proj-name">Brungle Browser</div>
+                <div class="proj-url">brungle.pages.dev</div>
+              </div>
+              <span class="arrow">↗</span>
+            </a>
+
+            <a href="https://studio-brungle.pages.dev" target="_blank" class="proj-row">
+              <div class="proj-icon" style="background:rgba(184,122,164,0.1);color:#b87aa4;">
+                <span class="iconify" data-icon="lucide:palette" style="font-size:14px;"></span>
+              </div>
+              <div style="flex:1;min-width:0;">
+                <div class="proj-name">Brungle Studio</div>
+                <div class="proj-url">studio-brungle.pages.dev</div>
+              </div>
+              <span class="arrow">↗</span>
+            </a>
+
+            <a href="https://maps-brungle.pages.dev" target="_blank" class="proj-row">
+              <div class="proj-icon" style="background:rgba(90,170,170,0.1);color:#5aaaaa;">
+                <span class="iconify" data-icon="lucide:map" style="font-size:14px;"></span>
+              </div>
+              <div style="flex:1;min-width:0;">
+                <div class="proj-name">Brungle Maps</div>
+                <div class="proj-url">maps-brungle.pages.dev</div>
+              </div>
+              <span class="arrow">↗</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    <div class="mono" style="text-align: center; margin-top: 28px; font-size: 10px; color: var(--text-dim); opacity: 0.5;">
+      click the categories!
+    </div>
+
+  </div>
+
+
+
+</body>
+<!-- Audios -->
+<audio id="delete-effect" style="display: none; visibility: hidden; pointer-events: none" src="../Assets/Delete.mp3"></audio>
+<audio id="openmodal-effect" style="display: none; visibility: hidden; pointer-events: none" src="../Assets/OpenModal.mp3"></audio>
